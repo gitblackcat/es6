@@ -8,7 +8,19 @@
 
 <body>
     <script>
-    let [x = y, y = 1] = []
+    let foo, bar
+
+    function f() {
+        return {
+            foo: 'aaa',
+            bar: 'bbb'
+        }
+    }
+
+    ;
+    ({ foo, bar } = f())
+
+    console.log(foo, bar)
     </script>
 </body>
 
