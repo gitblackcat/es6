@@ -7,20 +7,40 @@
 </head>
 
 <body>
+    <div></div>
     <script>
-    let foo, bar
+    // var total = 30;
+    // var msg = passthru `${total} The total is ( with tax) ${total*1.05}`;
 
-    function f() {
-        return {
-            foo: 'aaa',
-            bar: 'bbb'
+    // function passthru(literals) {
+    //     var result = '';
+    //     var i = 0;
+    //     console.log(literals.length)
+    //     console.log(literals)
+
+    //     while (i < literals.length) {
+    //         result += literals[i++];
+    //         if (i < arguments.length) {
+    //             result += arguments[i];
+    //         }
+    //     }
+
+    //     return result;
+    // }
+    // console.log(msg)
+
+    let total = 30,
+        msg = passthru `The total is ${total} (${total*1.05} with tax)`
+
+    function passthru(literals, ...values) {
+        var str = ''
+        for (var i = 0, len = values.length; i < len; i++) {
+            str += literals[i] + values[i]
         }
+        str += literals[i]
+        return str
     }
-
-    ;
-    ({ foo, bar } = f())
-
-    console.log(foo, bar)
+    console.log(msg)
     </script>
 </body>
 
