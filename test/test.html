@@ -9,15 +9,22 @@
 <body>
     <div></div>
     <script>
-    let str
+    const TOKEN_Y = /\s*([0-9]+|\+)\s*/y,
+        TOKEN_G = /\s*([0-9]+|\+)\s*/g
 
-    let arr = ['y', 'z', 'd']
+    tokenize(TOKEN_Y, '3+4')
+    tokenize(TOKEN_G, '3+4')
 
-    arr.forEach((item, index) => {
-        str += arr.raw(index)
-    })
+    function tokenize(TOKEN_REGEX, str) {
+        let result = [],
+            match
 
-    console.log(str)
+        while (match = TOKEN_REGEX.exec(str)) {
+            result.push(match[0])
+        }
+
+        return result
+    }
     </script>
 </body>
 
