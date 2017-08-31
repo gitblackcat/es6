@@ -9,22 +9,7 @@
 <body>
     <div></div>
     <script>
-    const TOKEN_Y = /\s*([0-9]+|\+)\s*/y,
-        TOKEN_G = /\s*([0-9]+|\+)\s*/g
-
-    tokenize(TOKEN_Y, '3+4')
-    tokenize(TOKEN_G, '3+4')
-
-    function tokenize(TOKEN_REGEX, str) {
-        let result = [],
-            match
-
-        while (match = TOKEN_REGEX.exec(str)) {
-            result.push(match[0])
-        }
-
-        return result
-    }
+    console.log(Number.parseInt === parseInt)
     </script>
 </body>
 
