@@ -13,34 +13,8 @@
 
 <body>
     <script>
-    function tco(f) {
-        var value;
-        var active = false;
-        var accumulated = [];
-
-        return function accumulator() {
-            accumulated.push(arguments);
-            if (!active) {
-                active = true;
-                console.log(accumulated)
-                while (accumulated.length) {
-                    value = f.apply(this, accumulated.shift());
-                }
-                active = false;
-                return value;
-            }
-        };
-    }
-
-    var sum = tco(function(x, y) {
-        if (y > 0) {
-            return sum(x + 1, y - 1)
-        } else {
-            return x
-        }
-    });
-
-    sum(1, 100000)
+    let a = [1, 5, -9, 7].findIndex((val, index, arr) => val < 0)
+    console.log(a)
     </script>
 </body>
 

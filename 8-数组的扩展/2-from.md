@@ -1,5 +1,5 @@
 ### Array.from()
-`Array.from`方法用于将两类对象转给真正的数组(原对象保持不变,是返回一个新的数组): `类似数组的对象(array-like object)`和`可遍历(iterable)对象`(包括ES6新增的数据结构`Set`和`Map`)
+`Array.from`方法用于将两类对象转为真正的数组(原对象保持不变,是返回一个新的数组): `类似数组的对象(array-like object)`和`可遍历(iterable)对象`(包括ES6新增的数据结构`Set`和`Map`)
 
 ```javascript
 let obj = {
