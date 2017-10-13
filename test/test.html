@@ -13,8 +13,13 @@
 
 <body>
     <script>
-    let flag = 0 in [, , ]
-    console.log(flag)
+    const obj = {
+        get foo() {},
+        set foo(x) {}
+    }
+    const descriptor = Object.getOwnPropertyDescriptor(obj, 'foo')
+
+    console.log(descriptor.set.name)
     </script>
 </body>
 
