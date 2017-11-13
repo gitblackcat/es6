@@ -13,13 +13,13 @@
 
 <body>
     <script>
-    const obj = {
-        get foo() {},
-        set foo(x) {}
-    }
-    const descriptor = Object.getOwnPropertyDescriptor(obj, 'foo')
+    const a = { a: 1 },
+        b = { b: 2 },
+        c = { c: 3 }
 
-    console.log(descriptor.set.name)
+    Object.assign(a, b, c)
+
+    console.log(a, b, c)
     </script>
 </body>
 
